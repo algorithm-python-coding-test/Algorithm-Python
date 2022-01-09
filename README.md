@@ -5,6 +5,18 @@
 
 
 ### 최희진
+- 복습
+  - BFS/DFS
+    - 1번 시간초과
+    - 3번 O
+    - 6번 예시 테스트만 맞고 채점은 틀림
+  - Dynamic Programming
+    - 2번 O
+    - 3번 O
+  - 최단 경로
+    - 2번 O
+    - 3번 O
+    - 4번 O 
 - Greedy
   - part 3
     - 1번 O
