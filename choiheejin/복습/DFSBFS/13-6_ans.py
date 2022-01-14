@@ -50,7 +50,7 @@ def place():
 
     if count == 3:
         result = check()
-        return
+        return result
 
     for i in range(len(graph) ** 2):
         if graph[i // n][i % n] == "X":
@@ -60,7 +60,7 @@ def place():
             count -= 1
             graph[i // n][i % n] = "X"
 
-place()
+result = place()
 if result:
     print("YES")
 else:
