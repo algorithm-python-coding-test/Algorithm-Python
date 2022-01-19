@@ -18,7 +18,6 @@ int n;
 int column[13];	//i번째 행의 column[i]번째 열에 퀸이 존재
 int ret = 0;
 
-
 int main()
 {
 	cin >> n;
@@ -31,7 +30,6 @@ int main()
 
 	cout << ret;
 }
-
 
 void dfs(int i)
 {
@@ -66,3 +64,49 @@ void dfs(int i)
 		}
 	}
 }
+
+//프로그래머스 제출용 코드
+//#include <cmath>
+//#include <vector>
+//
+//using namespace std;
+//
+//void dfs(int i, int n);
+//int column[13];
+//int ret = 0;
+//
+//int solution(int n) {
+//	for (int i = 1; i <= n; i++)
+//	{
+//		column[1] = i;
+//		dfs(2, n);
+//	}
+//	return ret;
+//}
+//
+//void dfs(int i, int n)
+//{
+//	if (i > n)
+//	{
+//		ret++;
+//		return;
+//	}
+//	else
+//	{
+//		for (int j = 1; j <= n; j++)
+//		{
+//			bool flag = true;
+//			for (int k = 1; k <= i - 1; k++)
+//			{
+//				pair<int, int> prev_Post = { k, column[k] };
+//				if (j == column[k] || (abs(k - i) == abs(column[k] - j)))
+//					flag = false;
+//			}
+//			if (flag)
+//			{
+//				column[i] = j;
+//				dfs(i + 1, n);
+//			}
+//		}
+//	}
+//}
