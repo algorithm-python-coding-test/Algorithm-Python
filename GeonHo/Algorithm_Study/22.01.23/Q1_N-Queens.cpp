@@ -5,6 +5,9 @@
 *
 * 한 줄에 둘 이상의 퀸은 존재할 수 없음.
 * BackTracking 알고리즘의 대표격 문제!!
+* 
+* >>최소 0.01ms, 3.67MB의 성능
+* >>최대 281.47ms, 4.27MB의 성능
 */
 #include <iostream>
 #include <cmath>
