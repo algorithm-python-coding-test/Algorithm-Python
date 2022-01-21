@@ -1,4 +1,4 @@
-// solution -> SocialDistance -> SocialDistance2
+// solution -> SocialDistance -> SocialDistance2 
 // 각 교실을 탐색한다.
 // 먼저 사람이 앉아있는 곳 'P'를 찾고 거기서 탐색을 시작한다.
 // 탐색을 시작하는 곳인 'P'는 'X'로 바꾸고 탐색을 시작한다. (그래야 두 칸 떨어진 거리두기 확인 때 오류가 나지 않는다.)
