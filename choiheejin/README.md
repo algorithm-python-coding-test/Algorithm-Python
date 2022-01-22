@@ -5,7 +5,7 @@
 
 - [거리두기 확인하기](https://programmers.co.kr/learn/courses/30/lessons/81302) : O
 - [N-Qeen](https://programmers.co.kr/learn/courses/30/lessons/12952) : 정확도 72.7(테스트 9, 10, 11 시간초과)
-- [문자열 압축](https://programmers.co.kr/learn/courses/30/lessons/60057) :
+- [문자열 압축](https://programmers.co.kr/learn/courses/30/lessons/60057) : O
 
 ### 개인 문제
 
