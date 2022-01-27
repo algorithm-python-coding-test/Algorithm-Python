@@ -1,5 +1,6 @@
+
 /*
-* problem : Maximize Expression
+* problem : Maximize Number
 * 숫자들과 3가지의 연산문자 (+, -, *)만으로 이루어진 연산 수식이 주어질 때
 * 연산자의 우선순위를 자유롭게 재정의하여 만들 수 있는 절대값이 가장 큰 숫자를 도출
 *
