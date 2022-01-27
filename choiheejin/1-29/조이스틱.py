@@ -66,4 +66,5 @@ def solution(name):
     
     return acost + lcost
 
-print(solution("ABB"))
+print(solution("AAABAAAAAABAA"))
+# 테스트 케이스 13, 18, 22, 23, 24, 25, 27 실패
