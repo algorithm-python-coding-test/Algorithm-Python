@@ -56,62 +56,35 @@ long long solution(string expression) {
     //permutation을 사용하기 위해 연산자를 오름차순으로 구성
     string op_str = "*+-";
     //permutation에 따라 연산자 우선순위가 결정
-    //각 우선순위별로 계산을 진행한다.
-    //첫번째 while : 1순위 연산자만 연산, 두번째 while : 2순위 연산자만 연산...
+    //각 우선순위 순서로 계산을 진행한다.
     do {
         //num_list을 그대로 사용하면 다음 연산에 사용할 수 없으므로 
         //num_list의 값을 tempList에 복사하여 사용
         list<Node> tempList;
         tempList.assign(num_list.begin(), num_list.end());
-        //1순위 연산자 연산 시작
-        list<Node>::iterator iter = tempList.begin();
-        while (iter->next_op != 'x') {
-            if (iter->next_op == op_str[0]) {
-                long long num1 = iter->data;
-                iter = tempList.erase(iter);
-                long long num2 = iter->data;
-                char newOp = iter->next_op;
-                iter = tempList.erase(iter);
-                long long newNum = calculate(op_str[0], num1, num2);
-                tempList.insert(iter, { newNum, newOp });
-                iter--;
-                continue;
+        //우선순위에 따른 계산 진행
+        //각 연산자 별로 노드의 next_op가 'x'가 될 때까지 반복
+        //노드의 next_op가 현재 연산자와 일치한다면
+        //다음 노드와 연산 후 연산 결과와 다음 노드의 next_op를 가지는 새로운 노드 삽입
+        //연산에 사용된 노드들은 제거
+        for (int i = 0; i < 3; i++) {
+            list<Node>::iterator iter = tempList.begin();
+            while (iter->next_op != 'x') {
+                if (iter->next_op == op_str[i]) {
+                    long long num1 = iter->data;
+                    iter = tempList.erase(iter);
+                    long long num2 = iter->data;
+                    char newOp = iter->next_op;
+                    iter = tempList.erase(iter);
+                    long long newNum = calculate(op_str[i], num1, num2);
+                    tempList.insert(iter, { newNum, newOp });
+                    iter--;
+                    continue;
+                }
+                iter++;
             }
-            iter++;
         }
-        //2순위 연산자 연산 시작
-        iter = tempList.begin();
-        while (iter->next_op != 'x') {
-            if (iter->next_op == op_str[1]) {
-                long long num1 = iter->data;
-                iter = tempList.erase(iter);
-                long long num2 = iter->data;
-                char newOp = iter->next_op;
-                iter = tempList.erase(iter);
-                long long newNum = calculate(op_str[1], num1, num2);
-                tempList.insert(iter, { newNum, newOp });
-                iter--;
-                continue;
-            }
-            iter++;
-        }
-        //3순위 연산자 연산 시작
-        iter = tempList.begin();
-        while (iter->next_op != 'x') {
-            if (iter->next_op == op_str[2]) {
-                long long num1 = iter->data;
-                iter = tempList.erase(iter);
-                long long num2 = iter->data;
-                char newOp = iter->next_op;
-                iter = tempList.erase(iter);
-                long long newNum = calculate(op_str[2], num1, num2);
-                tempList.insert(iter, { newNum, newOp });
-                iter--;
-                continue;
-            }
-            iter++;
-        }
-        //연산 후 남은 노드의 data를 현재 case의 결과로 반환
+        //연산 후 남은 결과의 data를 현재 case의 결과로 반환
         long long case_ret = tempList.begin()->data;
         //현재까지 계산된 answer와 현재 case의 결과를 비교하여 큰 값을 answer에 저장
         answer = (abs(answer) > abs(case_ret)) ? abs(answer) : abs(case_ret);
