@@ -32,7 +32,7 @@ def findClosest(node, length, alphabets, visited):
     else:
         dFromRightNode = length - alphabets[node][0] + alphabets[right][0] 
               
-    if dFromLeftNode < dFromRightNode:
+    if dFromLeftNode <= dFromRightNode:
         return (left, dFromLeftNode)
     return (right, dFromRightNode)
         
@@ -40,16 +40,11 @@ def findClosest(node, length, alphabets, visited):
     
 def solution(name):
     alphabets = []
+    acost = 0
     for i in range(0, len(name)):
         if ord(name[i]) - ord('A') != 0 or i == 0:
-            alphabets.append((i, ord(name[i]) - ord('A')))
-    acost = 0
-    
-    for i in range(len(alphabets)):
-        if alphabets[i][1] < 13:
-            acost += alphabets[i][1]
-        else:
-            acost += 26 - alphabets[i][1]
+            alphabets.append(i)
+            acost += min(ord(name[i])-ord('A'), ord('Z')-ord(name[i])+1)
     
     lcost = 0
     visited = [False] * len(alphabets)

@@ -2,6 +2,7 @@ import heapq
 
 def solution(scoville, K):
     heapq.heapify(scoville)
+    print(scoville)
     count = 0
     while scoville:
         a = heapq.heappop(scoville)

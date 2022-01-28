@@ -48,3 +48,5 @@ def solution(info, query):
                 count += 1
         result.append(count)
     return result
+
+# 정확도 100 & 효율성 0
