@@ -1,15 +1,27 @@
 <details> 
+<summary>1/23</summary>
+
+### °øÅë ¹®Á¦
+
+- [°Å¸®µÎ±â È®ÀÎÇÏ±â](https://programmers.co.kr/learn/courses/30/lessons/81302) : O
+- [N-Qeen](https://programmers.co.kr/learn/courses/30/lessons/12952) : O
+- [¹®ÀÚ¿­ ¾ĞÃà](https://programmers.co.kr/learn/courses/30/lessons/60057) : O
+
+### °³ÀÎ ¹®Á¦
+
+- [µğ½ºÅ© ÄÁÆ®·Ñ·¯](https://programmers.co.kr/learn/courses/30/lessons/42627) : ½ÇÆĞ ÈÄ ´ä¾È È®ÀÎ
+- [Á¤¼ö »ï°¢Çü](https://programmers.co.kr/learn/courses/30/lessons/43105) : O
+
 <summary>1/29</summary>
 
-### ê³µí†µ ë¬¸ì œ
+### °øÅë ¹®Á¦
 
-- [ì¡°ì´ìŠ¤í‹±](https://programmers.co.kr/learn/courses/30/lessons/42860) : O
-- [ìˆ˜ì‹ìµœëŒ€í™”](https://programmers.co.kr/learn/courses/30/lessons/67257) : ì‹¤íŒ¨ í›„ ë‹µì•ˆ í™•ì¸
-- [ë”ë§µê²Œ](https://programmers.co.kr/learn/courses/30/lessons/42626) : O
+- [Á¶ÀÌ½ºÆ½](https://programmers.co.kr/learn/courses/30/lessons/42860) : O
+- [¼ö½ÄÃÖ´ëÈ­](https://programmers.co.kr/learn/courses/30/lessons/67257) : ½ÇÆĞ ÈÄ ´ä¾È È®ÀÎ
+- [´õ¸Ê°Ô](https://programmers.co.kr/learn/courses/30/lessons/42626) : O
 
-### ê°œì¸ ë¬¸ì œ
-
-- [ì¹´ì¹´ì˜¤ í”„ë Œì¦ˆ ì»¬ëŸ¬ë§ë¶](https://programmers.co.kr/learn/courses/30/lessons/1829) : O
-- [ì˜¤í”ˆì±„íŒ…ë°©](https://programmers.co.kr/learn/courses/30/lessons/42888) : O
+### °³ÀÎ ¹®Á¦
+- [Ä«Ä«¿À ÇÁ·»Áî ÄÃ·¯¸µºÏ](https://programmers.co.kr/learn/courses/30/lessons/1829) : O
+- [¿ÀÇÂÃ¤ÆÃ¹æ](https://programmers.co.kr/learn/courses/30/lessons/42888) : O
 
 </details>
