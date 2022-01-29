@@ -1,48 +1,42 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# ## 개인풀이
-
-# In[31]:
-
+### 개인풀이
 
 def solution(info, query):
     
+    #info와 query를 담은 리스트로 변경
     info_list = [sent.split()[:-1]+[int(sent.split()[-1])] for sent in info]
     query_list = [sent1.split(' and ')[:-1]+[sent1.split()[-2],int(sent1.split()[-1])] for sent1 in query]
 
+    #각 info와 query를 비교하여 일치하는 경우에는 카운트(cnt)에 1더하기
     answer = []
-    for q in query_list:
+    for query_ in query_list:
         cnt = 0
-        for i in info_list:
-            cnt+=check(i,q)
+        for info_ in info_list:
+            cnt+=check(info_,query_)
         answer.append(cnt)
     
     return answer
 
-def check(p,q):
-    for i,j in zip(p,q):
-        if i==j or j=='-':
+#개별 query와 info 비교하는 함수
+#모든 조건 만족할 경우 return 1, 한개라도 만족하지 않을 경우 return 0
+def check(info_,query_):
+    for i,q in zip(info_,query_):
+        if i==q or q=='-':
             continue
-        elif type(i)==int and int(i)>=int(j):
+        elif type(i)==int and int(i)>=int(q):
             continue
         else:
             return 0
     return 1
 
-#효율성 테스트 통과X
+# 정확도 테스트 통과O
+# 효율성 테스트 통과X
 
+# 카카오 해설[https://tech.kakao.com/2021/01/25/2021-kakao-recruitment-round-1/] 
+# 효율성 테스트를 통과하기 위해서는 쿼리 별로 만족하는 경우를 모두 정리한 후 이진탐색 권장
 
-# 
-# ##### 카카오 해설: https://tech.kakao.com/2021/01/25/2021-kakao-recruitment-round-1/
-# ##### ->이진탐색 권장
+### 다른사람 풀이
 
-# ## 다른사람 풀이
-
-# #### 1) 이진탐색 사용
-
-# In[37]:
-
+# 1) 이진탐색 사용
 
 from itertools import combinations
 from bisect import bisect_left
@@ -93,10 +87,7 @@ def solution(info, query):
     return answer
 
 
-# #### 2)이진탐색 미사용
-
-# In[ ]:
-
+# 2)이진탐색 미사용
 
 def solution(info, query):
     data = dict()
@@ -133,8 +124,6 @@ def solution(info, query):
                 r = mid
             else:
                 l = mid+1
-            # print(l, r, mid, answer)
-        # answer.append((pool, find, mid))
         answer.append(len(pool)-l)
 
     return answer
