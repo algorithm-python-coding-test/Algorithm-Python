@@ -11,7 +11,9 @@
 
 - [디스크 컨트롤러](https://programmers.co.kr/learn/courses/30/lessons/42627) : 실패 후 답안 확인
 - [정수 삼각형](https://programmers.co.kr/learn/courses/30/lessons/43105) : O
+</details> 
 
+<details> 
 <summary>1/29</summary>
 
 ### 공통 문제
