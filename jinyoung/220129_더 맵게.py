@@ -1,10 +1,4 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# ### 개인풀이
-
-# In[1]:
-
+### 개인풀이
 
 import heapq
 def solution(scoville, K):
@@ -24,12 +18,10 @@ def solution(scoville, K):
                 answer+=1
             
     return answer
+# 정확도 테스트 통과
+# 효율성 테스트 통과
 
-
-# In[6]:
-
-
-#sort 이용한 풀이
+# sort 이용한 풀이
 def solution(scoville, K):
     answer = 0
     
@@ -49,26 +41,11 @@ def solution(scoville, K):
             
     return answer
 
-# 효율성  테스트
-# 테스트 1 〉	실패 (시간 초과)
-# 테스트 2 〉	실패 (시간 초과)
-# 테스트 3 〉	실패 (시간 초과)
-# 테스트 4 〉	실패 (시간 초과)
-# 테스트 5 〉	실패 (시간 초과)
-# 채점 결과
-# 정확성: 76.2
-# 효율성: 0.0
-# 합계: 76.2 / 100.0
+# 정확도 테스트 통과
+# 효율성 테스트 통과X -> 정렬하는데 시간이 늘어남
 
-##정렬하는데 시간이 늘어남
+### 다른풀이
 
-
-# ### 다른풀이
-
-# In[ ]:
-
-
-#다른풀이
 from heapq import heapify, heappush, heappop
 def solution(scoville, K):
     heapify(scoville)
@@ -78,4 +55,3 @@ def solution(scoville, K):
             if scoville[0] >= K: return i+1
         except:
             return -1
-
