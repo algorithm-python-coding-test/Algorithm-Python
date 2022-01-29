@@ -1,21 +1,16 @@
-#!/usr/bin/env python
-# coding: utf-8
+### 개인풀이
 
-# ### 개인풀이
-
-# In[92]:
-
-
-#스택을 활용한 후위표기법으로 변환 후 계산
+# 스택을 활용한 후위표기법으로 변환 후 계산
+# 참고 : 후위표기법[https://jamanbbo.tistory.com/53]
 
 import re
 
 #expression의 숫자와 기호를 분리하여 리스트로 만드는 함수
 def expression_split(expression):
     
-    #indices는 수식의 +,-,*의 인덱스 저장
-    #prec에는 수식에 들어가 있는 +-* 저장
-    indices = [i.start() for i in re.finditer('[\+\-\*]', expression)]
+    #indices는 expression +,-,*의 인덱스 저장
+    #prec은 expression에 어떤 계산부호가 들어가 있는지(+-*) 저장
+    indices = [i.start() for i in re.finditer('[\+\-\*])', expression)]
     prec = [expression[i] for i in indices]
     
     ex_split = []
@@ -83,13 +78,14 @@ def calculator(number_list):
     return abs(cal_list[0])
     
 def solution(expression):
-    #수식을 숫자와 계산부호로의 리스트로 나누는 함수 expression_split
-    #ex_split은 분리한 리스트, prec은 여기서 사용한 계산부호들의 리스트
+
+    #ex_split은 expression을 숫자와 기호로 분리한 리스트, prec은 여기서 사용한 계산부호의 리스트
     ex_split,prec = expression_split(expression)
     
     results = []
     
     #사용한 계산 부호에 따라 우선순위 경우의 수 부여하기
+    
     if len(prec)==1:
         precs = [{prec[0]:1}]
     elif len(prec)==2:
