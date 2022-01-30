@@ -17,10 +17,8 @@ long long calculate(char op, long long num1, long long num2) {
     switch (op) {
     case '*':
         return num1 * num2;
-
     case '+':
         return num1 + num2;
-
     case '-':
         return num1 - num2;
     }
