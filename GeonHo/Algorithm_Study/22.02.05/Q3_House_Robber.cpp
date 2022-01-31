@@ -6,6 +6,8 @@
 * 효율성테스트
 * Runtime: 0 ms, faster than 100.00% of C++ online submissions for House Robber II.
 * Memory Usage: 7.8 MB, less than 57.45% of C++ online submissions for House Robber II.
+* 
+* memset을 사용하여 배열 초기화 하는것이 for문을 돌리는 것 보다 효율적
 */
 #include <iostream>
 #include <vector>
