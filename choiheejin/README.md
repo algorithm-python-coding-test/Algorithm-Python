@@ -29,3 +29,14 @@
 - [메뉴 리뉴얼](https://programmers.co.kr/learn/courses/30/lessons/72411?) : O
 
 </details>
+
+<details> 
+<summary>2/5</summary>
+
+### 공통 문제
+
+- [주차 요금 계산](hhttps://programmers.co.kr/learn/courses/30/lessons/92341) : O
+
+### 개인 문제
+
+</details>
