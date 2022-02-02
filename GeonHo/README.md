@@ -19,3 +19,13 @@
 
 ### 개인 문제
 삼성 DX 특강 대체...
+
+22.02.05
+### 공통 문제
+
+- [주차요금정산](https://programmers.co.kr/learn/courses/30/lessons/92341) : O
+- [프린터](https://programmers.co.kr/learn/courses/30/lessons/42587) : O
+- [House Robber II](https://leetcode.com/problems/house-robber-ii/) : O
+
+### 개인 문제
+삼성 DX 특강 대체...
