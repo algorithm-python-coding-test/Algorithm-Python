@@ -38,6 +38,6 @@
 - [HouseRobber](https://leetcode.com/problems/house-robber-ii/) : O
 
 ### 개인 문제
-- [LCS](https://www.acmicpc.net/problem/9251) : 
+- [LCS](https://www.acmicpc.net/problem/9251) : 실패 후 답안 확인
 
 </details>
