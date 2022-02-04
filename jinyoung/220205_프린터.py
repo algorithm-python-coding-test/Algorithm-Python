@@ -1,13 +1,7 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[ ]:
-
-
 ### 개인풀이
 
 def solution(priorities, location):
-    #인텍스 리스트 생성
+    #인덱스 리스트 생성
     idx_list = [i for i in range(len(priorities))]
     
     print_list = []
