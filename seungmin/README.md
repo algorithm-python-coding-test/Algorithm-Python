@@ -27,3 +27,17 @@
 - [오픈채팅방](https://programmers.co.kr/learn/courses/30/lessons/42888) : O
 
 </details>
+
+<details> 
+<summary>2/5</summary>
+
+### 공통 문제
+
+- [주차요금계산](https://programmers.co.kr/learn/courses/30/lessons/92341) : O
+- [프린터](https://programmers.co.kr/learn/courses/30/lessons/42587) : O
+- [HouseRobber](https://leetcode.com/problems/house-robber-ii/) : O
+
+### 개인 문제
+- [LCS](https://www.acmicpc.net/problem/9251) : 
+
+</details>
