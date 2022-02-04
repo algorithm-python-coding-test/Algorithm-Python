@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[104]:
-
-
 ### 개인풀이
 
 #최댓값을 더해가는 풀이
