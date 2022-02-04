@@ -36,6 +36,8 @@
 ### 공통 문제
 
 - [주차 요금 계산](hhttps://programmers.co.kr/learn/courses/30/lessons/92341) : O
+- [프린터](https://programmers.co.kr/learn/courses/30/lessons/42587) : 정확도 95% (테스트 7 실패)
+- [house-robber-ii](https://leetcode.com/problems/house-robber-ii/) : O
 
 ### 개인 문제
 
