@@ -25,3 +25,17 @@
 - [순위검색](https://programmers.co.kr/learn/courses/30/lessons/72412) : 효율성테스트 통과X
 
 </details>
+<details> 
+
+<summary>1/29</summary>
+  
+### 공통 문제
+
+- [프린터](https://programmers.co.kr/learn/courses/30/lessons/42587) : O
+- [주차요금계산](https://programmers.co.kr/learn/courses/30/lessons/92341) : O
+- [House Rob II](https://leetcode.com/problems/house-robber-ii/) : 통과 X
+
+### 개인 문제
+  
+
+</details>
