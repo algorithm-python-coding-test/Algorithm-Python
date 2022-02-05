@@ -50,5 +50,5 @@ def calculate_time(time_list):
     return total_time
 
 
-### 다른사람 풀이
+
 
