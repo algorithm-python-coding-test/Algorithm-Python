@@ -8,6 +8,7 @@ def solution(fees, records):
     answer=[]
 
     #차량별 주차시간 딕셔너리만들기
+    #ex) '5961': ['05:34', '07:59', '22:59', '23:00'] ->in/out 번갈아서 나타남
     for i in records:
         if records_dict.get(i.split()[1]) is not None:
             records_dict[i.split()[1]].append(i.split()[0])
@@ -17,11 +18,12 @@ def solution(fees, records):
     #차량 번호순으로 정렬해서 차량별 총 주차시간계산
     car_list = sorted(list(records_dict.keys()))
     for car in car_list:
-        #주차기록이 짝수인경우/홀수인경우로 나누어 계산
+        #주차기록이 짝수개인 경우/홀수개 인경우로 나누어 계산
+        #주차기록이 짝수개인 경우 in/out이 번갈아 나타나므로 그대로 calculate함수에 넣어서 계산
         if len(records_dict[car])%2==0:
             total_time = calculate_time(records_dict[car])
         else:
-            #홀수인 경우 마지막 기록만 따로 계산하여 더해줌
+            #홀수인 경우 마지막 기록만 제외하고 계산하여 따로 더해줌
             total_time = calculate_time(records_dict[car][:-1])
             hour =  23-int(records_dict[car][-1][:2])
             minute = 59-int(records_dict[car][-1][3:])
