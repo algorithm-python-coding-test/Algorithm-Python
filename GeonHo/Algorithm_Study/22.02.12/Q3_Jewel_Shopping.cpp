@@ -10,14 +10,6 @@
 * 최소 2.04ms / 3.95MB의 성능
 * 최대 64.65ms / 12MB의 성능
 */
-#include <iostream>
-#include <string>
-#include <vector>
-#include <algorithm>
-#include <set>
-#include <map>
-
-using namespace std;
 
 //투포인터 알고리즘을 사용
 //s : gems에 있는 모든 보석 종류의 갯수를 구하기 위해 사용
@@ -31,6 +23,16 @@ using namespace std;
 //map. insert, find, erase : O(logN)
 //투포인터 알고리즘 : O(N)
 //-> solution의 시간 복잡도 : O(NlogN)정도로 예상
+
+#include <iostream>
+#include <string>
+#include <vector>
+#include <algorithm>
+#include <set>
+#include <map>
+
+using namespace std;
+
 vector<int> solution(vector<string> gems) {
     vector<int> answer;
     answer.push_back(1);
