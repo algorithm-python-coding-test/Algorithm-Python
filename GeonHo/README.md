@@ -29,3 +29,13 @@
 
 ### 개인 문제
 삼성 DX 특강 대체...
+
+22.02.12
+### 공통 문제
+
+- [받아쓰기](https://www.acmicpc.net/problem/20542) : O
+- [뉴스 클러스터링](https://programmers.co.kr/learn/courses/30/lessons/17677)
+- [보석 쇼핑](https://programmers.co.kr/learn/courses/30/lessons/67258)
+
+### 개인 문제
+삼성 DX 특강 대체...
