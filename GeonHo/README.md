@@ -33,7 +33,7 @@
 22.02.12
 ### 공통 문제
 
-- [받아쓰기](https://www.acmicpc.net/problem/20542)
+- [받아쓰기](https://www.acmicpc.net/problem/20542) : O
 - [뉴스 클러스터링](https://programmers.co.kr/learn/courses/30/lessons/17677) : O
 - [보석 쇼핑](https://programmers.co.kr/learn/courses/30/lessons/67258) : O
 
