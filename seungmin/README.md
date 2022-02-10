@@ -52,6 +52,6 @@
 - [보석상점](https://programmers.co.kr/learn/courses/30/lessons/67258) : O
 
 ### 개인 문제
-- [등굣길](https://programmers.co.kr/learn/courses/30/lessons/42898) : O
+- [등굣길](https://programmers.co.kr/learn/courses/30/lessons/42898) : 실패 후 답안확인
 - [추석트래픽](https://programmers.co.kr/learn/courses/30/lessons/17676)
 </details>
