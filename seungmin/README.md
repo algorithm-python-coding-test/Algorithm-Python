@@ -41,3 +41,17 @@
 - [LCS](https://www.acmicpc.net/problem/9251) : 실패 후 답안 확인
 
 </details>
+
+<details> 
+<summary>2/12</summary>
+
+### 공통 문제
+
+- [받아쓰기](https://programmers.co.kr/learn/courses/30/lessons/92341) : O
+- [뉴스 클러스터링](https://programmers.co.kr/learn/courses/30/lessons/17677) : O
+- [보석상점](https://programmers.co.kr/learn/courses/30/lessons/67258) : O
+
+### 개인 문제
+- [등굣길](https://programmers.co.kr/learn/courses/30/lessons/42898) : O
+- [추석트래픽](https://programmers.co.kr/learn/courses/30/lessons/17676)
+</details>
