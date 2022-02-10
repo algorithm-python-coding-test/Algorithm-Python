@@ -24,12 +24,15 @@
 //투포인터 알고리즘 : O(N)
 //-> solution의 시간 복잡도 : O(NlogN)정도로 예상
 
+//map,set -> unordered_map으로 자료구조 수정.
+//unordered_map의 insert연산은 O(1)이므로 solution의 시간복잡도는 O(N)으로 예상
+//->최소 0.95ms, 최대 27.68ms로 속도향상
+
 #include <iostream>
 #include <string>
 #include <vector>
 #include <algorithm>
-#include <set>
-#include <map>
+#include <unordered_map>
 
 using namespace std;
 
@@ -38,16 +41,16 @@ vector<int> solution(vector<string> gems) {
     answer.push_back(1);
     answer.push_back(1);
     //gems내의 모든 보석 종류의 갯수를 구하기 위해 s 사용
-    set<string> s;
+    unordered_map<string, int> s;
     for (int i = 0; i < gems.size(); i++)
-        s.insert(gems[i]);
+        s[gems[i]]++;
     //gems에 보석의 종류가 1개밖에 없다면 그대로 answer를 리턴
     if (s.size() == 1)
         return answer;
     //투포인터 알고리즘 연산
     //kinds : string 이름의 보석이 int개 만큼 존재
     int left = 0, right = 1;
-    map<string, int> kinds;
+    unordered_map<string, int> kinds;
     int minDistance = 1e9;
     kinds[gems[0]]++;
     while (right < gems.size()) {
