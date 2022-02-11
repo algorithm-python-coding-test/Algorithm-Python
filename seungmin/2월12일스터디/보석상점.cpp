@@ -9,6 +9,11 @@
 - 각각의 쇼핑의 길이를 비교하며 가장 적은 값을 구하고, 가장 적을 때의 start_gem_index와 last_gem_index 값을 저장한다.
 */
 
+/* 소요시간 (효율성 테스트)
+최소 : 0.97ms , 3.82MB
+최대 : 17.63ms , 13MB
+*/
+
 #include <bits/stdc++.h>
 
 using namespace std;

@@ -7,6 +7,10 @@
 - 동적계획법으로 푸는데, 계속해서 나머지연산을 해줘야함
 */
 
+/* 소요시간
+최소 : 0.04ms, 3.92MB
+최대 : 0.07ms, 3.95MB
+*/
 #include <bits/stdc++.h>
 
 using namespace std;
