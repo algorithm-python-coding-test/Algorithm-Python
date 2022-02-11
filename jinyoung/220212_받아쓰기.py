@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[4]:
-
-
 n, m = map(int, input().split())
 answer = input()
 corr = input()
