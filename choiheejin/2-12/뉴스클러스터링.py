@@ -44,7 +44,7 @@ def solution(str1, str2):
     for e in intersect:
         intersectCount += min(str1MultiList.count(e), str2MultiList.count(e))
         
-    # 중복없이 합집합 구하기
+    # 합집합 개수 구하기
     unionCount = 0
     for e in union:
         unionCount += max(str1MultiList.count(e), str2MultiList.count(e))
