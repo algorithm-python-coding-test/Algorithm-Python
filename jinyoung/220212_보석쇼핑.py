@@ -23,7 +23,7 @@ import collections
 def solution(gems):
     
     #need는 보석 종류별로 1개씩 담은 딕셔너리
-    #ex) need={"RUBY":1,"DIA":!,"EMERALD":1, "SAPPHIRE":1}
+    #ex) need={"RUBY":1,"DIA":1,"EMERALD":1, "SAPPHIRE":1}
     #missing은 추가적으로 담아야 하는 보석종류의 수
     #ex) 위의 예에서는 4가지 보석이 있어야하기 떄문에 missing 값은 4에서 시작
     #left, right는 각각 이동하는 포인터를 의미하며 start,end는 최소길이일 때 갱신하기 위한 변수
@@ -37,7 +37,7 @@ def solution(gems):
     #right 포인터를 gems의 0에서부터 한칸씩 오른쪽으로 이동하면서 새로운 종류의 보석이 추가되면 missing을 1씩 빼줌
     #이 때 need 딕셔너리에서 해당 보석의 값을 1씩 빼주면 한개 이상 중복된 보석은 음수의 값을 가지게 됨
     #필요한 보석의 모든 종류가 포함될 때까지(missing이 0이 될 때까지) 이동
-    #missing이 0이 되면 left 포인터를 0에서부터 오른쪽으로 이동하면서 need 딕셔너리의 해당 보석의 값을 더해줌
+    #missing이 0이 되면 left 포인터를 0에서부터 오른쪽으로 이동하면서 need 딕셔너리의 해당 보석의 값을 1씩 더해줌
     #딕셔너리 값이 0보다 커지면 안되므로 그때 left와 right의 길이가 이전꺼보다 작으면 갱신
 
     for right, gem in enumerate(gems):
