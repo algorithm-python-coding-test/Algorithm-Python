@@ -1,79 +1,56 @@
-//Union - Find연산에 기초하여 구현할 수 있을것 같음
-//근데 k값의 범위가 너무 커서 parent 정적 배열로 구현 불가능... 
-//Node를 연결하고, mapping하여 Node를 찾아가는 방식으로 구현
-//->정적배열로 구현되는 union-find와 다르게 링크된 노드들의 parent 값을 유지하기 힘들다
+//링크된 노드들에 공통된 값을 유지하는것은 매우 어렵다...
+//링크된 노드들에 parent값을 유지하지 않으면 모든 노드를 순회하는것은 불가피하다
+//결국 모든 노드들을 순회하지 않고 빠르게 head를 찾는것이 관건인듯
+//입력 -> 끝의 방을 mapping하여 찾아가는 식으로 해보는건 어떨까
 
-#include <iostream>
-#include <string>
-#include <vector>
+//실행시간 144.19ms / 227.61ms
+
 #include <unordered_map>
+#include <iostream>
+#include <vector>
 
 using namespace std;
+
 typedef long long ll;
 
-struct roomNode {
-    ll rNumber;
-    roomNode* next = this;
-    roomNode* head = this;
-}roomNodes[200001];
-
-unordered_map<ll, roomNode*> um;
-
-int nodeCnt = 0;
-
-roomNode* find_parent(roomNode* rm) {
-    if (rm->next == rm) return rm;
-    else {
-        return rm = find_parent(rm->next);
-    }
-}
+unordered_map<ll, ll> selected_room;        //실제 배정된 방들
+unordered_map<ll, ll> assigned_room;        //입력된 방, 최근에 배정된 방
 
 vector<ll> solution(ll k, vector<ll> room_number) {
     vector<ll> answer;
     for (int i = 0; i < room_number.size(); i++) {
-        //room_number[i]의 방이 존재하지 않는경우
-        if (um.count(room_number[i]) == 0) {
-            roomNodes[nodeCnt].rNumber = room_number[i];
-            um[room_number[i]] = &roomNodes[nodeCnt];
-            //room_number[i] - 1의 방이 존재하면 현재 방과 연결
-            if (um.count(room_number[i] - 1)) {
-                um[room_number[i] - 1]->next = &roomNodes[nodeCnt];
-                um[room_number[i] - 1]->head = &roomNodes[nodeCnt];
+        //room_number[i]의 방이 이미 배정되어 있다면
+        //연결된 방들 중 최종적인 head를 찾아내어 방을 배정
+        if (selected_room[room_number[i]] == 1) {
+            vector<ll> candidates;          /*이전 알고리즘들과 속도 차이를 내는 부분*/
+            candidates.push_back(room_number[i]);
+            ll temp = assigned_room[room_number[i]] + 1;
+            candidates.push_back(temp);
+
+            while (selected_room[temp] != 0) {  /*연결된 모든 노드들을 검사하지 않고, tail -> head로 점프 가능!*/
+                temp = assigned_room[temp] + 1;
+                candidates.push_back(temp);
             }
-            //room_number[i] + 1의 방이 존재하면 현재 방과 연결
-            if (um.count(room_number[i] + 1)) {
-                roomNode* rm = find_parent(um[room_number[i] + 1]);
-                um[room_number[i]]->next = um[room_number[i] + 1];
-                um[room_number[i]]->head = rm;
+
+            selected_room[temp]++;
+            for (int i = 0; i < candidates.size(); i++) {
+                assigned_room[candidates[i]] = temp;    /*이후 검색된 모든 tail의 head를 temp로 업데이트*/
             }
+            answer.push_back(temp);
+        }
+        //room_number[i]의 방이 배정되어있지 않다면
+        else {
+            //room_number[i]의 방을 배정하고, room_number[i]의 head는 room_number[i]로 초기화
+            selected_room[room_number[i]]++;
+            assigned_room[room_number[i]] = room_number[i];
             answer.push_back(room_number[i]);
         }
-
-        //room_number[i]의 방이 존재하는 경우
-        else {
-            roomNode* rm = find_parent(um[room_number[i]]);
-            roomNodes[nodeCnt].rNumber = rm->rNumber + 1;
-            um[roomNodes[nodeCnt].rNumber] = &roomNodes[nodeCnt];
-            rm->next = &roomNodes[nodeCnt];
-            //room_number[i] + 1 의 방이 존재하면 rm과 현재 방 모두 연결
-            if (um.count(roomNodes[nodeCnt].rNumber + 1)) {
-                roomNode* nm = find_parent(um[roomNodes[nodeCnt].rNumber + 1]);
-                roomNodes[nodeCnt].next = um[roomNodes[nodeCnt].rNumber + 1];
-                roomNodes[nodeCnt].head = nm;
-                rm->head = nm;
-            }
-            else {
-                rm->head = &roomNodes[nodeCnt];
-            }
-            answer.push_back(roomNodes[nodeCnt].rNumber);
-        }
-        nodeCnt++;
     }
     return answer;
 }
 
 int main() {
-    vector<ll> ret = solution(10, { 1, 3, 4, 1, 3, 1 });
+    vector<ll> ret = solution(10, { 1, 1, 2, 2, 3, 3, 4, 4 });
     for (int i = 0; i < ret.size(); i++) {
         cout << ret[i] << '\n';
     }
