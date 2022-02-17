@@ -15,10 +15,10 @@ int _size = 0;
 vector<int> solution(string s) {
     vector<int> answer;
     //queue 자료구조를 활용하여 문자열 s를 처리
-    //생각해보니 queue를 쓸 필요는 없었지만 시간복잡도는 vector와 같으므로 수정하지 않음
     queue<int> q;
     string temp = "";
     //문자열 s를 모두 순회하며 집합을 찾아냄
+    //queue를 사용. FIFO를 활용하여 집합의 순서를 보장
     for (int i = 1; i < s.length() - 1; i++) {
         if (s[i] == '{') continue;
         //쉼표는 숫자 사이의 쉼표만 처리된다.
@@ -41,6 +41,7 @@ vector<int> solution(string s) {
             //괄호가 닫힐때 두 칸을 건너뛰어 괄호 사이의 쉼표를 처리
             i++;
         }
+        //숫자가 나오는 경우는 temp에 숫자를 더해줌
         else {
             temp += s[i];
         }
