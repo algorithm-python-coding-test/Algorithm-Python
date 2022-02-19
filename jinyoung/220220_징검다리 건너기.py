@@ -1,12 +1,6 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[ ]:
-
-
 #개인 풀이
 
-###
+###통과 못함
 
 
 def solution(stones, k):
