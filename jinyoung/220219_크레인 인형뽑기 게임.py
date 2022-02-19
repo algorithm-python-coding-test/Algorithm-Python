@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[ ]:
-
-
 def solution(board, moves):
     
     m,n = len(board),len(board[0])
