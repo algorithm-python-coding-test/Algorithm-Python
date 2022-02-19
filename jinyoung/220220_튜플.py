@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[8]:
-
-
 def solution(s):
     answer =[]
     #'},{를 기준으로 나눈 후 숫자로 분리하여 리스트의 길이 순으로 정렬
