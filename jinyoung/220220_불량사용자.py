@@ -1,5 +1,5 @@
 
-#개인 풀이
+###개인 풀이
 
 ###통과하지 못함
 ###가능한 아이디 후보군까지는 만들었지만 이후 가능한 쌍을 조합하는데서 막힘
@@ -36,7 +36,10 @@ def solution(user_id, banned_id):
     
     return 
 
-#다른사람 풀이
+###다른사람 풀이
+
+###가능한 모든 조합을 먼저 뽑아낸 후 비교
+### 최소 0.02, 최대 282.02ms
 
 from itertools import permutations 
 
@@ -57,7 +60,10 @@ def check(users,banned_id):
     return True
 
 def solution(user_id, banned_id):
-    #가능한 모든 user_id의 순열 리스트 생성
+    
+    #banned_id 개수만큼 가능한 모든 user_id의 순열(튜플)로 리스트 생성
+    #ex) user_id =  ["frodo", "fradi", "crodo", "abc123", "frodoc"], banned_id = ["fr*d*", "*rodo", "******", "******"]
+    #    user_permutation = [('frodo', 'fradi', 'crodo', 'abc123'), ('frodo', 'fradi', 'crodo', 'frodoc'), ...]
     user_permutation = list(permutations(user_id,len(banned_id)))
     banned_Set = []
 
