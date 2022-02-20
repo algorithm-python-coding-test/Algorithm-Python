@@ -55,3 +55,16 @@
 - [등굣길](https://programmers.co.kr/learn/courses/30/lessons/42898) : 실패 후 답안확인
 - [추석트래픽](https://programmers.co.kr/learn/courses/30/lessons/17676) : O
 </details>
+
+<details> 
+<summary>2/19</summary>
+
+### 공통 문제
+
+- [크레인 인형뽑기 게임](https://programmers.co.kr/learn/courses/30/lessons/64061) : O
+- [튜플](https://programmers.co.kr/learn/courses/30/lessons/64065) : O
+- [불량사용자](https://programmers.co.kr/learn/courses/30/lessons/64064) : X
+- [호텔방배정](https://programmers.co.kr/learn/courses/30/lessons/64063) : X
+- [징검다리 건너기](https://programmers.co.kr/learn/courses/30/lessons/64062) : X
+
+</details>

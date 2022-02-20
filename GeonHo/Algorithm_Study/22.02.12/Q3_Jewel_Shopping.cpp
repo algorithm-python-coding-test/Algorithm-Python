@@ -27,6 +27,7 @@
 //map,set -> unordered_map으로 자료구조 수정.
 //unordered_map의 insert연산은 O(1)이므로 solution의 시간복잡도는 O(N)으로 예상
 //->최소 0.95ms, 최대 27.68ms로 속도향상
+//-->불필요한 연산 제거 후 최대 19.81ms로 속도향상
 
 #include <iostream>
 #include <string>
@@ -68,10 +69,10 @@ vector<int> solution(vector<string> gems) {
         //현재 포인터 범위내 보석의 종류가 전체 보석의 종류와 같다면
         if (kinds.size() == s.size()) {
             //gems[right]가 gems[right - 1]과 같다면 right의 보석은 제거해도 좋음
-            while (left < right && gems[right] == gems[right - 1]) {
-                kinds[gems[right]]--;
-                right--;
-            }
+            /*while (left < right && gems[right] == gems[right - 1]) {
+            //    kinds[gems[right]]--;
+            //    right--;
+            */} // -> 불필요한 연산
             //현재 범위가 minDistance보다 짧다면 answer갱신
             if (right - left < minDistance) {
                 minDistance = right - left;
