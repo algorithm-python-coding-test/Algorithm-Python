@@ -55,3 +55,16 @@
 ### 개인 문제
 
 </details>
+<summary>2/20</summary>
+
+### 공통 문제
+
+- [불량 사용자](https://programmers.co.kr/learn/courses/30/lessons/64064) : X
+- [징검다리 건너기](https://programmers.co.kr/learn/courses/30/lessons/64062) : X
+- [크레인 인형](https://programmers.co.kr/learn/courses/30/lessons/67258) : O
+- [튜플](https://programmers.co.kr/learn/courses/30/lessons/64065) : O
+- [호텔 방 배정](https://programmers.co.kr/learn/courses/30/lessons/67258) : X
+
+### 개인 문제
+
+</details>
