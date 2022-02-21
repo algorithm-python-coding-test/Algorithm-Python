@@ -1,3 +1,8 @@
+###개인풀이
+
+###시간 내 통과
+###최소 0.02ms, 최대 1.28ms
+
 def solution(board, moves):
     
     m,n = len(board),len(board[0])
@@ -27,4 +32,3 @@ def solution(board, moves):
             
             
     return answer
-
