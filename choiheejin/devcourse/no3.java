@@ -22,8 +22,15 @@ public class no3 {
             graph.get(entity[1]).add(entity[0]);
         }
 
+        dfs(people, graph, 1, passenger);
+
         int[] answer = {};
         return answer;
+    }
+
+    public static void dfs(int[] people, List<List<Integer>> graph, int node, int[] passenger) {
+        people[node] += passenger[node];
+
     }
 
     public static void main(String[] args) {

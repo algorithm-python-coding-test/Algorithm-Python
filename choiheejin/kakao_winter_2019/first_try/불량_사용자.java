@@ -9,9 +9,7 @@
 package choiheejin.kakao_winter_2019.first_try;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 public class 불량_사용자 {
     public int solution(String[] user_id, String[] banned_id) {

@@ -1,4 +1,4 @@
-package choiheejin.kakao_winter_2019;
+package choiheejin.kakao_winter_2019.first_try;
 // 구현
 
 // [0 0 0 0 0]
