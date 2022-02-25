@@ -55,7 +55,7 @@ vector<ll> solution(ll k, vector<ll> room_number) {
             roomNodes[nodeCnt].rNumber = rm->rNumber + 1;
             um[roomNodes[nodeCnt].rNumber] = &roomNodes[nodeCnt];
             rm->next = &roomNodes[nodeCnt];
-            //room_number[i] + 1 의 방이 존재하면 rm과 현재 방 모두 연결
+            //roomNodes[nodeCnt].rNumber + 1 의 방이 존재하면 rm과 현재 방 모두 연결
             if (um.count(roomNodes[nodeCnt].rNumber + 1)) {
                 roomNode* nm = find_parent(um[roomNodes[nodeCnt].rNumber + 1]);
                 roomNodes[nodeCnt].next = um[roomNodes[nodeCnt].rNumber + 1];

@@ -8,6 +8,8 @@
 
 //실행시간 2.50ms / 3.55ms
 
+//https://www.acmicpc.net/problem/2110
+
 #include <vector>
 #include <algorithm>
 
