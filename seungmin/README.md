@@ -68,3 +68,15 @@
 - [징검다리 건너기](https://programmers.co.kr/learn/courses/30/lessons/64062) : X
 
 </details>
+
+<details> 
+<summary>2/19</summary>
+
+### 공통 문제
+
+- [숫자 문자열과 영단어](https://programmers.co.kr/learn/courses/30/lessons/81301) : O
+- [표 편집](https://programmers.co.kr/learn/courses/30/lessons/81303) : X, 정확성: 30.0, 효율성: 49.0
+- [미로탈출](https://programmers.co.kr/learn/courses/30/lessons/81304) : X
+- [시험장 나누기](https://programmers.co.kr/learn/courses/30/lessons/81305) : X
+
+</details>
