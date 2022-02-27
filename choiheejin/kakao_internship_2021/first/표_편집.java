@@ -1,11 +1,13 @@
-// 구현 : 삭제된 행을 복구해야함 -> 하나의 변수에 {위치, 정보} 저장
-// 선택된 행은 하나의 변수로 구현
-// 마지막 행을 삭제하면 다음으로 마지막 행이 되는 것을 선택
-// 현재 선택된 것보다 위에서 복구가 이뤄지면 여전히 그것을 선택하고 있어야함!!
-// 효율성이므로 삭제가 편한 Linked List로 관리
-// 케이스
-// 선택된 것이 마지막 것인데 마지막 것을 삭제하는 경우: 선택된 행 -1
-// 테스트 케이스 2가 반례임.... 굳이 같은 노드를 두번 가지 않고 같은 함정을 두번 갈 수 있음...
+// // 1차 : LinkedList와 Stringbuilder를 사용했으나 
+// 정확도와 효율성 모두 부족했음 
+// -> 이후 정확도를 채우고 
+// Stringbuilder를 처음부터 사용하여 효율성을 높였으나
+// 여전히 효율성 테스트를 넘지 못함
+// -> LinkedList의 추가/삭제 속도는 O(1)이지만 
+// 추가/삭제 대상이 되는 노드를 탐색하는데 O(n)이 걸리기 때문 
+// -> 직접 구현해야 하며 DoubleLinked여야 함
+// 최소시간 : 1.95ms
+// 최대시간 : 5.16ms
 package choiheejin.kakao_internship_2021.first;
 
 import java.util.LinkedList;
@@ -27,7 +29,7 @@ public class 표_편집 {
         List<Entry> list = new LinkedList<>();
         int cursor = k;
         Stack<Entry> removed = new Stack<>();
-        // 최대 1,000,000 번
+
         for (int i = 0; i < n; i++) {
             answer += "O";
             list.add(new Entry(i));
@@ -45,16 +47,15 @@ public class 표_편집 {
             } else if (line.startsWith("D")) {
                 cursor += Integer.parseInt(line.substring(2));
                 if (cursor >= n) {
-                    cursor = n - 1;
+                    cursor = list.size() - 1;
                 }
                 // 삭제
             } else if (line.equals("C")) {
-                System.out.println(cursor);
                 Entry removedEntry = list.remove(cursor);
                 sb.setCharAt(removedEntry.firstIndex, 'X');
                 removedEntry.removedIndex = cursor;
                 removed.push(removedEntry);
-                if (cursor == n - 1) {
+                if (cursor == list.size()) {
                     cursor--;
                 }
                 // 복구
@@ -62,15 +63,18 @@ public class 표_편집 {
                 Entry removedEntry = removed.pop();
                 list.add(removedEntry.removedIndex, removedEntry);
                 sb.setCharAt(removedEntry.firstIndex, 'O');
+                if (removedEntry.removedIndex <= cursor) {
+                    cursor++;
+                }
             }
         }
         return sb.toString();
     }
 
     public static void main(String[] args) {
-        int n = 30;
+        int n = 8;
         int k = 2;
-        String[] cmd = { "D 23", "C", "U 20", "C", "Z" };
+        String[] cmd = { "D 2", "C", "U 3", "C", "D 4", "C", "U 2", "Z", "Z", "U 1", "C" };
         System.out.println(new 표_편집().solution(n, k, cmd));
 
     }
