@@ -4,7 +4,7 @@
 #include <string>
 #include <vector>
 
-     using namespace std;
+ using namespace std;
 
  int _left, _right, _mid;
  int _cnt;
