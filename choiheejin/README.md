@@ -71,6 +71,20 @@
 
 </details>
 
+<details> 
+<summary>2/27</summary>
+
+### 공통 문제
+
+- [숫자 문자열과 영단어](https://programmers.co.kr/learn/courses/30/lessons/81301) : O - 문자열 처리
+- [표 편집](https://programmers.co.kr/learn/courses/30/lessons/81303) : X X - LinkedList 구현
+- [미로 탈출](https://programmers.co.kr/learn/courses/30/lessons/81304) : X - 다익스트라
+- [시험장 나누기](https://programmers.co.kr/learn/courses/30/lessons/81305) : X X - dp, 파라메트릭
+
+### 개인 문제
+
+</details>
+
 ### 코테 리뷰
 
 <details>
