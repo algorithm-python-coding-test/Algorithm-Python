@@ -80,3 +80,14 @@
 - [시험장 나누기](https://programmers.co.kr/learn/courses/30/lessons/81305) : X
 
 </details>
+
+<summary>3/05</summary>
+
+### 공통 문제
+
+- [오픈 채팅방](https://programmers.co.kr/learn/courses/30/lessons/42888) : O
+- [실패율](https://programmers.co.kr/learn/courses/30/lessons/42889) : O
+- [후보키](https://programmers.co.kr/learn/courses/30/lessons/42890) : X, 32점
+- [무지의 먹방 라이브](https://programmers.co.kr/learn/courses/30/lessons/42891) : X, 17점
+
+</details>

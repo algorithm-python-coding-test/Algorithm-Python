@@ -28,7 +28,7 @@
 효율성: 49.0
 합계: 79.0 / 100.0
 
-- 연결리스트 형태로 푸는것은 맞으나, hash_table을 이용할때 key값을 참조하는 시간이 꽤나 소요되는것 같음
+- 연결리스트 형태로 푸는것은 맞으나, hash_table을 이용할때 key값을 참조하는 시간이 꽤나 소요되는것 같음 O(1) 
 - 더 시도했으나 개선하지 못함
 */
 
@@ -88,12 +88,13 @@ string solution(int n, int k, vector<string> cmd) {
                 curr = chart[curr].next;
         }
         else if (cur_cmd[0] == 'C') {
+            ND* p = &chart[curr];
             // 삭제 되었음을 저장
             chart[curr].del = 1;
             // stack에 삭제된 행의 index 저장
             dels.push(curr);
 
-            int next_curr = chart[curr].next;
+            int next_curr = *p.next;
             int prev_curr = chart[curr].prev;
 
             if (next_curr != -1) {
