@@ -85,6 +85,23 @@
 
 </details>
 
+<details> 
+<summary>3/5</summary>
+
+### 공통 문제
+
+- [오픈채팅방](https://programmers.co.kr/learn/courses/30/lessons/42888) : O
+- [실패율](https://programmers.co.kr/learn/courses/30/lessons/42889) : O
+- [후보키](https://programmers.co.kr/learn/courses/30/lessons/42890) : O
+- [무지의 먹방 라이브](https://programmers.co.kr/learn/courses/30/lessons/42891) : X X (46점)
+- [길 찾기](https://programmers.co.kr/learn/courses/30/lessons/42892) : X
+- [매칭 점수](https://programmers.co.kr/learn/courses/30/lessons/42893) : X
+- [블록 게임](https://programmers.co.kr/learn/courses/30/lessons/42894) : X
+
+### 개인 문제
+
+</details>
+
 ### 코테 리뷰
 
 <details>
@@ -124,4 +141,10 @@
 - ?? X: 정확도 50%, dfs라고 판단하고 풀었지만 반례가 있었다. {10, 50, 40, 30, 20}
 
 - 최종 리뷰 : 5시간동안 2문제였고, 문제가 둘 다 체감상 너무 어려워서 체력적으로 많이 힘들었다.
+</details>
+
+<details>
+<summary>소마</summary>
+
+- 최종 리뷰 : 2시간동안 알고리즘 6문제 + SQL 1문제 + web 1문제...너무 시간이 없었다. 겨우 3문제만 케이스 통과했으나 채점 결과는 알려주지 않았다. 처음으로 자동완성 기능을 끄고 시험 본 경험으로 생각해야겠다.
 </details>
