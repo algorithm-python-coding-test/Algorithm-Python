@@ -57,3 +57,12 @@
 2019 카카오 BLIND RECRUITMENT
 시간제한 풀이 -> Q1 : 100 / Q2 : 100 / Q4 : 100 / Q6 : 100 => 400 / 700
 무제한 풀이 -> Q1, Q2, Q3, Q4, Q6 완료
+
+2022.03.13
+### 공통 문제
+
+- [최단경로](https://www.acmicpc.net/problem/1753) : O
+- [132패턴](https://leetcode.com/problems/132-pattern/) : O
+- [가장높은탑쌓기](https://www.acmicpc.net/problem/2655) : O
+
+
