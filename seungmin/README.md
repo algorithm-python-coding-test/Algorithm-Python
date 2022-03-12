@@ -81,6 +81,7 @@
 
 </details>
 
+<details>
 <summary>3/05</summary>
 
 ### 공통 문제
@@ -92,12 +93,13 @@
 
 </details>
 
+<details>
 <summary>3/13</summary>
 
 ### 공통 문제
 
 - [최단경로](https://www.acmicpc.net/problem/1753) : O
 - [132패턴](https://leetcode.com/problems/132-pattern/) : X
-- [DP]](https://www.acmicpc.net/problem/2655) : X
+- [DP](https://www.acmicpc.net/problem/2655) : X
 
 </details>
