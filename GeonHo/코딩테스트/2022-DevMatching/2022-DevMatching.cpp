@@ -1,5 +1,5 @@
 //#1. 프리미엄 유지 문제
-//윈도우 슬라이딩 알고리즘으로 해결
+//슬라이딩 윈도우 알고리즘으로 해결
 #include <algorithm>
 #include <string>
 #include <vector>
