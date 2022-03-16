@@ -21,7 +21,7 @@ public class 가장높은탑쌓기_ans {
 			list.add(new Brick(i + 1, area, height, weight));
 		}
 
-		// 넓이 기준으로 정렬하기
+		// 무게 기준으로 정렬하기
 		Collections.sort(list);
 
 		int[] dp = new int[n + 1];
