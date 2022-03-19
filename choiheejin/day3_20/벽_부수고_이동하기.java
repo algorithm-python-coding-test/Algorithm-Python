@@ -1,6 +1,6 @@
 // https://www.acmicpc.net/problem/2206
 // 벽을 한번만 부술 수 있음 
-// 소요 시간: 1028ms
+// 소요 시간: 1024ms
 package choiheejin.day3_20;
 
 import java.util.*;
@@ -36,32 +36,20 @@ public class 벽_부수고_이동하기 {
             if (curr[0] == n - 1 && curr[1] == m - 1) {
                 min = Math.min(min, curr[3]);
             }
-            // 벽을 부순 경우
-            if (curr[2] == 1) {
-                for (int i = 0; i < 4; i++) {
-                    int nextR = curr[0] + dr[i];
-                    int nextC = curr[1] + dc[i];
-                    if (0 <= nextR && nextR < n && 0 <= nextC && nextC < m && 0 <= nextR
-                            && graph[nextR][nextC] == '0') {
-                        if (!checked[nextR][nextC][1]) {
-                            checked[nextR][nextC][1] = true;
-                            q.add(new int[] { nextR, nextC, 1, curr[3] + 1 });
-                        }
+            for (int i = 0; i < 4; i++) {
+                int nextR = curr[0] + dr[i];
+                int nextC = curr[1] + dc[i];
+                // 그래프 경계선을 넘는지 확인
+                if (0 <= nextR && nextR < n && 0 <= nextC && nextC < m) {
+                    // 벽이 없는 곳으로 이동하는 경우
+                    if (graph[nextR][nextC] == '0' && !checked[nextR][nextC][curr[2]]) {
+                        checked[nextR][nextC][curr[2]] = true;
+                        q.add(new int[] { nextR, nextC, curr[2], curr[3] + 1 });
                     }
-                }
-                // 벽을 아직 부수지 않은 경우
-            } else {
-                for (int i = 0; i < 4; i++) {
-                    int nextR = curr[0] + dr[i];
-                    int nextC = curr[1] + dc[i];
-                    if (0 <= nextR && nextR < n && 0 <= nextC && nextC < m) {
-                        if (graph[nextR][nextC] == '1' && !checked[nextR][nextC][1]) {
-                            checked[nextR][nextC][1] = true;
-                            q.add(new int[] { nextR, nextC, 1, curr[3] + 1 });
-                        } else if (graph[nextR][nextC] == '0' && !checked[nextR][nextC][0]) {
-                            checked[nextR][nextC][0] = true;
-                            q.add(new int[] { nextR, nextC, 0, curr[3] + 1 });
-                        }
+                    // 아직 벽을 부순 적이 없어 벽이 있는 곳으로 이동하는 경우
+                    if (curr[2] == 0 && graph[nextR][nextC] == '1' && !checked[nextR][nextC][1]) {
+                        checked[nextR][nextC][1] = true;
+                        q.add(new int[] { nextR, nextC, 1, curr[3] + 1 });
                     }
                 }
             }
