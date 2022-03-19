@@ -115,6 +115,19 @@
 
 </details>
 
+<details> 
+<summary>3/20</summary>
+
+### 공통 문제
+
+- [방문 길이](https://programmers.co.kr/learn/courses/30/lessons/49994) : O
+- [벽 부수고 이동하기](https://www.acmicpc.net/problem/2206) : O
+- [01타일](https://www.acmicpc.net/problem/1904) : O
+
+### 개인 문제
+
+</details>
+
 ### 코테 리뷰
 
 <details>
@@ -160,4 +173,13 @@
 <summary>소마</summary>
 
 - 최종 리뷰 : 2시간동안 알고리즘 6문제 + SQL 1문제 + web 1문제...너무 시간이 없었다. 겨우 3문제만 케이스 통과했으나 채점 결과는 알려주지 않았다. 처음으로 자동완성 기능을 끄고 시험 본 경험으로 생각해야겠다.
+</details>
+
+<details>
+<summary>소마2</summary>
+
+- ?? X: 조합 + 브루트 포스로 풀었다. n = 16이므로 케이스 개수는 괜찮지만 각 케이스에서 답을 도출할 때 연산이 손님 수 \* 조합 크기였어서 시간 초과가 났을지도 모른다.
+- ?? X: union + find 구현 후 각 순차 탐색하여 학생의 점수를 채우고 다시 순차 탐색하여 최종 평균을 냄. 이것도 최적화가 덜 된 것 같다.
+
+- 최종 리뷰 : 2시간 동안 알고리즘 3문제 + SQL 1문제 + web 1문제, SQL 1문제까지 합쳐 3솔...?일 지 잘 모르겠다.
 </details>
