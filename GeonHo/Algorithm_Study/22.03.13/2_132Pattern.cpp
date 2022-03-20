@@ -24,7 +24,6 @@ bool solution(vector<int> nums) {
 
 //2. priority_queue을 사용한 구현 O(NlogN)
 //133ms
-
 #include <iostream>
 #include <vector>
 #include <queue>

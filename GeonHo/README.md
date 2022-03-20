@@ -1,42 +1,33 @@
 22.01.23
 ### 공통 문제
-
 - [거리두기 확인하기](https://programmers.co.kr/learn/courses/30/lessons/81302) : O
 - [N-Qeen](https://programmers.co.kr/learn/courses/30/lessons/12952) : O
 - [문자열 압축](https://programmers.co.kr/learn/courses/30/lessons/60057) : O
-
 ### 개인 문제
-
 - [Best Time to Buy and Sell Stock] (https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) : O
 - [올바른 괄호] (https://programmers.co.kr/learn/courses/30/lessons/12909) : O
 
 22.01.29
 ### 공통 문제
-
 - [조이스틱](https://programmers.co.kr/learn/courses/30/lessons/42860) : O
 - [수식 최대화](https://programmers.co.kr/learn/courses/30/lessons/67257) : O
 - [더 맵게](https://programmers.co.kr/learn/courses/30/lessons/42626) : O
-
 ### 개인 문제
 삼성 DX 특강 대체...
 
 22.02.05
 ### 공통 문제
-
 - [주차요금정산](https://programmers.co.kr/learn/courses/30/lessons/92341) : O
 - [프린터](https://programmers.co.kr/learn/courses/30/lessons/42587) : O
 - [House Robber II](https://leetcode.com/problems/house-robber-ii/) : O
-
 ### 개인 문제
 삼성 DX 특강 대체...
 
 22.02.12
 ### 공통 문제
-
 - [받아쓰기](https://www.acmicpc.net/problem/20542) : O
 - [뉴스 클러스터링](https://programmers.co.kr/learn/courses/30/lessons/17677) : O
 - [보석 쇼핑](https://programmers.co.kr/learn/courses/30/lessons/67258) : O
-
 ### 개인 문제
 삼성 DX 특강 대체...
 
@@ -60,9 +51,14 @@
 
 2022.03.13
 ### 공통 문제
-
 - [최단경로](https://www.acmicpc.net/problem/1753) : O
 - [132패턴](https://leetcode.com/problems/132-pattern/) : O
 - [가장높은탑쌓기](https://www.acmicpc.net/problem/2655) : O
+
+2022.03.20
+### 공통 문제
+- [벽 부수고 이동하기](https://www.acmicpc.net/problem/2206) : O
+- [01타일](https://www.acmicpc.net/problem/1904) : O
+- [방문길이](https://programmers.co.kr/learn/courses/30/lessons/49994) : O
 
 
