@@ -109,3 +109,10 @@ int main() {
 
 	cout << ret;
 }
+
+//#3. quests를 linkedlist로 관리, solved[][]를 만든 후, st-in에서 완료할 수 있는 퀘스트 개수 저장
+//->solved[st][in] = max(solved[st - 1][in], solved[st][in - 1]) + solvable
+//->pnt[st][in] = solved == solved[st - 1][in] ? pnt[st - 1][in] : pnt[st][in - 1] + solvable_pnt
+//quests list에서 solved된 문제 삭제
+//=> quests항목을 모두 조회하는 반복문을 없앨 수는 있음
+//=> quests의 최대 크기가 50이라 굳이...?
