@@ -129,3 +129,15 @@
 Ah...RPG
 
 </details>
+
+<details>
+<summary>4/04</summary>
+
+### 공통 문제
+
+- [물병](https://www.acmicpc.net/problem/1052) : O
+- [암호코드](https://www.acmicpc.net/problem/2011) : O
+- [잃어버린 괄호](https://www.acmicpc.net/problem/1541) : O
+
+
+</details>
