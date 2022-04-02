@@ -67,4 +67,8 @@
 - [추석 트래픽](https://programmers.co.kr/learn/courses/30/lessons/17676) : O
 - [RPG](https://www.acmicpc.net/problem/1315) : O
 
-
+2022.04.04
+### 공통 문제
+- [암호코드](https://www.acmicpc.net/problem/2011) : O
+- [잃어버린 괄호](https://www.acmicpc.net/problem/1541) : O
+- [물병](https://www.acmicpc.net/problem/1052) : O
