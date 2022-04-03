@@ -116,3 +116,28 @@
 다 푼건 참 오랜만이네요...엉엉
 
 </details>
+
+<details>
+<summary>3/27</summary>
+
+### 공통 문제
+
+- [불!](https://www.acmicpc.net/problem/4179) : O
+- [추석트래픽](https://programmers.co.kr/learn/courses/30/lessons/17676) : O
+- [RPG](https://www.acmicpc.net/problem/1315) : X
+
+Ah...RPG
+
+</details>
+
+<details>
+<summary>4/04</summary>
+
+### 공통 문제
+
+- [물병](https://www.acmicpc.net/problem/1052) : O
+- [암호코드](https://www.acmicpc.net/problem/2011) : O
+- [잃어버린 괄호](https://www.acmicpc.net/problem/1541) : O
+
+
+</details>

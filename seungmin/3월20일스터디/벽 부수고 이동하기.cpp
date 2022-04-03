@@ -1,3 +1,4 @@
+
 #include <queue>
 #include <iostream>
 using namespace std;
@@ -31,7 +32,7 @@ int main() {
             cin >> board[i][j];
         }
     }
-
+   
     queue<node> Q;
     vis1[0][0] = 1;
     vis2[0][0] = 1;
@@ -68,10 +69,10 @@ int main() {
     return 0;
 }
 
-
+/*
 // 처음 구현한 코드
 // 반례
-/* 상 우 하 좌
+// 상 우 하 좌
 4 6
 011111
 011111
@@ -113,7 +114,6 @@ int main() {
             cin >> board[i][j];
         }
     }
-
     queue<node> Q;
     Q.push({ 0,0,1,0 });
     vis[0][0] = 1;
