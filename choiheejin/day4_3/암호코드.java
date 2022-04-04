@@ -16,7 +16,7 @@
 //  else if n[i] != 0 && 10 <= n[i-1]~n[i] <= 26 -> dp[i-1] + dp[i-2]
 //  else if n[i] != 0 && n[i-1]~n[i] < 10 && n[i-1]~n[i] > 26 -> dp[i-1]
 
-// => 틀림 케이스 못찾겠음
+// => 260ms
 package choiheejin.day4_3;
 
 import java.util.*;
@@ -39,7 +39,11 @@ public class 암호코드 {
         for (int i = 1; i < n.length(); i++) {
             if (n.charAt(i) == '0') {
                 if (n.charAt(i - 1) == '1' || n.charAt(i - 1) == '2') {
-                    dp[i] = dp[i - 1];
+                    if (i == 1) {
+                        dp[i] = 1;
+                    } else {
+                        dp[i] = dp[i - 2];
+                    }
                 } else {
                     System.out.println(0);
                     return;
@@ -48,16 +52,16 @@ public class 암호코드 {
                 int twoChar = Integer.parseInt(n.substring(i - 1, i + 1));
                 if (twoChar >= 10 && twoChar <= 26) {
                     if (i == 1) {
-                        dp[i] = dp[i - 1] + 1;
+                        dp[i] = (dp[i - 1] + 1) % 1000000;
                     } else {
-                        dp[i] = dp[i - 1] + dp[i - 2];
+                        dp[i] = (dp[i - 1] + dp[i - 2]) % 1000000;
                     }
                 } else {
                     dp[i] = dp[i - 1];
                 }
             }
         }
-        System.out.println(dp[n.length() - 1] % 1000000);
+        System.out.println(dp[n.length() - 1]);
     }
 
 }
